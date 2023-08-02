@@ -6,7 +6,7 @@ RUN chmod +x mvnw
 RUN chmod +x mvn/wrapper/maven-wrapper.jar
 RUN chmod +x mvn/wrapper/maven-wrapper.properties
 # Build the server on run
-RUN ./mvnw build -x test --stacktrace
+RUN ./mvnw clean install
 
 # ===========================================================================================================
 # 1. Bin stages
