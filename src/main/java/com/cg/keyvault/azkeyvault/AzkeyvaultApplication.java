@@ -14,6 +14,13 @@ public class AzkeyvaultApplication implements CommandLineRunner {
     private String sampleProperty2;
     @Value("${samplePropertyInMultipleKeyVault}")
     private String samplePropertyInMultipleKeyVault;
+    
+    @Value("${dbname}")
+    private String dbname;
+    @Value("${host}")
+    private String host;
+    @Value("${port}")
+    private String port;
 
 	public static void main(String[] args) {
 		SpringApplication.run(AzkeyvaultApplication.class, args);
@@ -23,6 +30,8 @@ public class AzkeyvaultApplication implements CommandLineRunner {
         System.out.println("sampleProperty1: " + sampleProperty1);
         System.out.println("sampleProperty2: " + sampleProperty2);
         System.out.println("samplePropertyInMultipleKeyVault: " + samplePropertyInMultipleKeyVault);
+        
+        System.out.println("Database : " + host + ":" + port + "/" + dbname);
     }
 
 }
