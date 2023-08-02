@@ -18,6 +18,6 @@ RUN mkdir -p /app/libs
 
 # Copy the compiled output to new image
 COPY --from=builder /canoe/target/azkeyvault-0.0.1-SNAPSHOT.jar /app/libs
-RUN adduser -D canoe -u 10000
-USER canoe
+#RUN adduser -D canoe -u 10000
+#USER canoe
 ENTRYPOINT [ "java", "-jar", "/app/libs/azkeyvault-0.0.1-SNAPSHOT.jar"]
